@@ -8,7 +8,7 @@ cd $SCRIPT_PATH
 
 # Write your code below ---
 
-SERVER_URL=$1
+SERVER_DOMAIN=$1
 WORKSPACE_ID=$2
 
 if [[ "$LINUX_DISTRIBUTION" == $LINUX_DISTRIBUTION_ALPINE ]]; then
@@ -23,9 +23,9 @@ if [[ "$LINUX_DISTRIBUTION" == $LINUX_DISTRIBUTION_ALPINE ]]; then
 	wget --no-check-certificate "https://github.com/msgbyte/tianji/releases/latest/download/${REPORTER_FILENAME}-amd64-alpine" -O ${REPORTER_FILE}
 	chmod +x ${REPORTER_FILE}
 
-	${REPORTER_FILE} --url "https://${SERVER_URL}" --workspace "${WORKSPACE_ID}" > /dev/null 2>&1 &
+	${REPORTER_FILE} --url "https://${SERVER_DOMAIN}" --workspace "${WORKSPACE_ID}" > /dev/null 2>&1 &
 else
-	INSTALLTION_URL="https://${SERVER_URL}/serverStatus/${WORKSPACE_ID}/install.sh?url=${SERVER_URL}"
+	INSTALLTION_URL="https://${SERVER_DOMAIN}/serverStatus/${WORKSPACE_ID}/install.sh?url=${SERVER_DOMAIN}"
 
 	curl -o- ${INSTALLTION_URL} | bash
 	curl -o- ${INSTALLTION_URL} | bash -s -- reset_conf
@@ -34,15 +34,15 @@ fi
 # Show result
 cat <<CONTENT
 
-Usage: bash $0 SERVER_URL WORKSPACE_ID
-- SERVER_URL   = "domain.com"
+Usage: bash $0 SERVER_DOMAIN WORKSPACE_ID
+- SERVER_DOMAIN   = "domain.com"
 - WORKSPACE_ID = "abcdefghijklmnopqrstuvwxy"
 
 Note
 - HTTPS only
 
 Tianji reporter started in the background
-- ${SERVER_URL}
+- ${SERVER_DOMAIN}
 - ${WORKSPACE_ID}
 
 CONTENT
