@@ -21,6 +21,7 @@ Usually you just need to execute them with `BASH` like `bash /Path/To/Script.sh`
 - Add to path if you want to be able to call the scripts without using the installation path
 	- Add `export PATH="$PATH:/Joy/Utility/Script"` line into `~/.bashrc` file (or `~/.zshrc`/`~/.kshrc`)
 	- Activate immediately without a reboot: `source ~/.bashrc` (or `~/.zshrc`/`~/.kshrc`)
+- Update: `cd /Joy/Utility/Script && git pull`
 
 ## 📝 Create your own script
 
