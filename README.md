@@ -21,37 +21,22 @@ You can place your custom script anywhere on the system, at any path, just make 
 
 ## Linux distribution specific support
 - Alpine
-- Debian
+- Debian (Ubuntu, etc.)
 - RHEL (CentOS, AlmaLinux, Rocky, etc.)
 
 Scripts that do not use Linux distribution specific conditions may work without issues on any generic `*nix` system.
 
 ## Script
-- `Update.sh`: Update (and upgrade) the Linux operating system and installed applications. Also automatically installs some tools like `cURL`, `WGet`, `SUDo`, `Nano`, `HTop`, `Midnight Commander`, etc.
-	- Argument: `None`
-- `Portainer-Agent-Run`: Creates and runs a `Docker` container for `Portainer Agent` that another `Portainer` instance can connect to and collect container information.
+- **`Update`**: Update (and upgrade) the Linux operating system and installed applications. Also automatically installs some tools like `cURL`, `WGet`, `SUDo`, `Nano`, `HTop`, `Midnight Commander`, etc.
+- **`Portainer-Agent-Run`**: Creates and runs a `Docker` container for `Portainer Agent` that another `Portainer` instance can connect to and collect container information.
 	- ### Argument
-		- #### Agent secret
-			- Required: `True`
-			- Type: `STRING`
-- `Tianji-Reporter-Install`: Install `Tianji reporter` agent to send system analytics to the `Tianji` server.
+		- **Agent secret**: Required: `True`; Type: `STRING`
+- **`Tianji-Reporter-Install`**: Install `Tianji reporter` agent to send system analytics to the `Tianji` server.
 	- ### Argument
-		- #### Server domain
-			- Required: `True`
-			- Type: `STRING`
-			- Example: `tianji.domain.tld`
-		- #### Workspace ID
-			- Required: `True`
-			- Type: `STRING`
-			- Note: Get it from the `Tianji > Server > Add` button
-- `Dockhand-Hawser-agent-install`: Install `Hawser agent` to report system analytics to to the `Dockhand` server. This is used for edge devices that are behind `LAN` or `NAT` where the `Dockhand` server cannot reach them directly.
+		- **Server domain**: Required: `True`; Type: `STRING`; Example: `tianji.domain.tld`
+		- **Workspace ID**: Required: `True`; Type: `STRING`; **Note**: Get it using `Tianji > Server > Add` button
+- **`Dockhand-Hawser-agent-install`**: Install `Hawser agent` to report system analytics to to the `Dockhand` server. This is used for edge devices that are behind `LAN` or `NAT` where the `Dockhand` server cannot reach them directly.
 	- ### Argument
-		- #### Server domain
-			- Required: `True`
-			- Type: `STRING`
-			- Example: `dockhand.domain.tld`
-		- #### Token
-			- Required: `True`
-			- Type: `STRING`
-			- Note: Generate it from the `Dockhand > Settings > Environments > Add environment` button
+		- **Server domain**: Required: `True`; Type: `STRING`; Example: `dockhand.domain.tld`
+		- **Token**: Required: `True`; Type: `STRING`; **Note**: Generate it using `Dockhand > Settings > Environments > Add environment` button
 
