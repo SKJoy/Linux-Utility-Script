@@ -41,7 +41,7 @@ Scripts that do not use Linux distribution specific conditions may work without 
 - **`Set-default-editor`**: Set `Nano` as the default **CLI** editor
 - **`Trim-files`**: Trim files to `ZERO` byte size
 	- ### 📌 Argument
-		- **Maximum depth**: Required: `Optional`; Type: 🔤 `INTEGER`; Default: `10`
+		- **Maximum depth**: Required: `Optional`; Type: 🔢 `INTEGER`; Default: `10`
 		- **Base path**: Required: `Optional`; Type: 🔤 `STRING`; Default: `/`
 		- **File extension**: Required: `Optional`; Type: 🔤 `STRING`; Default: `log`
 - **`Portainer-Agent-Run`**: Creates and runs a `Docker` container for `Portainer Agent` that another `Portainer` instance can connect to and collect container information.
