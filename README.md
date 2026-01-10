@@ -8,6 +8,7 @@ A collection of utility scripts for Linux system management and maintenance. Eac
 	- Debian: `apt-get install -y bash git`
 	- RHEL: `dnf install -y bash git`
 - This library must be cloned at `/Joy/Utility/Script` path in order to execute prebuilt scripts without issues. Otherwise, if the location changes, you must update the prebuilt scripts with the modified path.
+- This is a **continuous** `work in progress`
 
 ## 🔨 Usage
 
