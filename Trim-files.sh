@@ -28,11 +28,11 @@ CURRENT_PATH=$BASE_PATH
 
 for ((DIRECTORY_DEPTH=1; DIRECTORY_DEPTH<=MAXIMUM_DIRECTORY_DEPTH; DIRECTORY_DEPTH++)); do
 	if (( DIRECTORY_DEPTH > 1 )); then
-		CURRENT_PATH="${CURRENT_PATH}*/"
+		CURRENT_PATH="${CURRENT_PATH}*"
 	fi
 
 	echo "- Truncating files in \"${CURRENT_PATH}\""
-	truncate -s 0 ${CURRENT_PATH}*.${LOG_FILE_EXTENSION} 2> /dev/null
+	truncate -s 0 ${CURRENT_PATH}/*.${LOG_FILE_EXTENSION} 2> /dev/null
 done
 
 # Show result
