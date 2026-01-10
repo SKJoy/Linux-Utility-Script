@@ -14,7 +14,7 @@ else
 	FILE_TO_EDIT="~/.profile"
 
 	if [ -f "$FILE_TO_EDIT" ]; then
-		# FILE_TO_EDIT="~/.profile"
+		X="Y"
 	else
 		FILE_TO_EDIT="~/.bashrc"
 	fi
