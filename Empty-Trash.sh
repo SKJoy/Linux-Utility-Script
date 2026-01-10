@@ -8,6 +8,9 @@ cd $SCRIPT_PATH
 
 # Write your code below ---
 
+echo "- Operation can take a long time depending on depth"
+echo "- Use CTRL + C to terminate at any moment"
+
 rm -rf /.trash/*
 rm -rf /root/.trash/*
 rm -rf /home/*/.trash/*
