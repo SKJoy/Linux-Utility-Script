@@ -18,14 +18,12 @@ else
 	else
 		FILE_TO_EDIT="~/.bashrc"
 	fi
+
+	echo "export EDITOR=\"nano\"" >> $FILE_TO_EDIT
+	echo "export VISUAL=\"nano\"" >> $FILE_TO_EDIT
+
+	source $FILE_TO_EDIT
 fi
-
-cat <<CONTENT >> "${FILE_TO_EDIT}"
-export EDITOR="nano"
-export VISUAL="$EDITOR"
-CONTENT
-
-source $FILE_TO_EDIT
 
 # Show result
 cat <<CONTENT
