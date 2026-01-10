@@ -13,14 +13,12 @@ FILE_TO_EDIT=~/.bashrc
 if [[ "$EDITOR" == "nano" ]]; then
 	echo "- Nano is already the default editor"
 else
-	if [ ! -f $FILE_TO_EDIT ]; then
-		FILE_TO_EDIT=~/.profile
-	fi
+	# if [ ! -f $FILE_TO_EDIT ]; then
+	# 	FILE_TO_EDIT=~/.profile
+	# fi
 
 	echo "export EDITOR=\"nano\"" >> $FILE_TO_EDIT
 	echo "export VISUAL=\"nano\"" >> $FILE_TO_EDIT
-
-	source $FILE_TO_EDIT
 fi
 
 # Show result
