@@ -32,5 +32,6 @@ cat <<CONTENT
 
 - EDITOR = "${EDITOR}"
 - FILE_TO_EDIT = "${FILE_TO_EDIT}"
+- Use "source ${FILE_TO_EDIT}" command to activate
 
 CONTENT
