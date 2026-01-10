@@ -17,7 +17,8 @@ Usually you just need to execute them with `BASH` like `bash /Path/To/Script.sh`
 - ### Install
 	- GIT: `git clone https://github.com/SKJoy/Linux-Utility-Script.git /Joy/Utility/Script`
 	- Manual: Download and place all files in `/Joy/Utility/Script` path
-- Example use: `bash /Joy/Utility/Script/Sample/My/Script.sh`
+- **Example** use: `bash /Joy/Utility/Script/Sample/My/Script.sh`
+- Add to path: Add `export PATH="$PATH:/Joy/Utility/Script"` line into `~/.bashrc` file (or `~/.zshrc`/`~/.kshrc`) in order to be able to call the scripts directly from anywhere without the specific path
 
 ## 📝 Create your own script
 
@@ -41,7 +42,7 @@ Scripts that do not use Linux distribution specific conditions may work without 
 	- ### 📌 Argument
 		- **Server domain**: Required: `True`; Type: 🔤 `STRING`; Example: `tianji.domain.tld`
 		- **Workspace ID**: Required: `True`; Type: 🔤 `STRING`; **Note**: Get it using `Tianji > Server > Add` button
-- **`Dockhand-Hawser-agent-install`**: Install `Hawser agent` to report system analytics to to the `Dockhand` server. This is used for edge devices that are behind `LAN` or `NAT` where the `Dockhand` server cannot reach them directly.
+- **`Dockhand-Hawser-agent-install`**: Install `Hawser agent` to report system analytics to to the `Dockhand` server. This is used for **edge devices** that are behind `LAN` or `NAT` where the `Dockhand` server cannot reach them directly.
 	- ### 📌 Argument
 		- **Server domain**: Required: `True`; Type: 🔤 `STRING`; Example: `dockhand.domain.tld`
 		- **Token**: Required: `True`; Type: 🔤 `STRING`; **Note**: Generate it using `Dockhand > Settings > Environments > Add environment` button
