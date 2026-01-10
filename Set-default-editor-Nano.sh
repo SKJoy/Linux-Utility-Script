@@ -8,11 +8,11 @@ cd $SCRIPT_PATH
 
 # Write your code below ---
 
+FILE_TO_EDIT="~/.profile"
+
 if [[ "$EDITOR" == "nano" ]]; then
 	echo "- Nano is already the default editor"
 else
-	FILE_TO_EDIT="~/.profile"
-
 	if [ -f "$FILE_TO_EDIT" ]; then
 		X="Y"
 	else
@@ -28,6 +28,7 @@ fi
 # Show result
 cat <<CONTENT
 
+- EDITOR = "${EDITOR}"
 - FILE_TO_EDIT = "${FILE_TO_EDIT}"
 
 CONTENT
