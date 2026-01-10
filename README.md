@@ -39,6 +39,7 @@ Scripts that do not use Linux distribution specific conditions may work without 
 ## 📚 Script
 - **`Update`**: Update (and upgrade) the Linux operating system and installed applications. Also automatically installs some tools like `cURL`, `WGet`, `SUDo`, `Nano`, `HTop`, `Midnight Commander`, etc.
 - **`Set-default-editor`**: Set `Nano` as the default **CLI** editor
+- **`Empty-Trash`**: Empty trash folders including base trash path, trash for `root` user and trash for all other users
 - **`Trim-files`**: Trim files to `ZERO` byte size
 	- 👿 Dangerous command, use with **CAUTION**!
 	- ### 📌 Argument
