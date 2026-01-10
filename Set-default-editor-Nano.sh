@@ -20,10 +20,12 @@ else
 	fi
 fi
 
-# cat <<CONTENT >> $FILE_TO_EDIT
-# export EDITOR="nano"
-# export VISUAL="$EDITOR"
-# CONTENT
+cat <<CONTENT >> $FILE_TO_EDIT
+export EDITOR="nano"
+export VISUAL="$EDITOR"
+CONTENT
+
+source $FILE_TO_EDIT
 
 # Show result
 cat <<CONTENT
