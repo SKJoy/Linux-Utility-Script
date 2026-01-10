@@ -39,6 +39,11 @@ Scripts that do not use Linux distribution specific conditions may work without 
 ## 📚 Script
 - **`Update`**: Update (and upgrade) the Linux operating system and installed applications. Also automatically installs some tools like `cURL`, `WGet`, `SUDo`, `Nano`, `HTop`, `Midnight Commander`, etc.
 - **`Set-default-editor`**: Set `Nano` as the default **CLI** editor
+- **`Trim-files`**: Trim files to `ZERO` byte size
+	- ### 📌 Argument
+		- **Maximum depth**: Required: `Optional`; Type: 🔤 `INTEGER`; Default: `10`
+		- **Base path**: Required: `Optional`; Type: 🔤 `STRING`; Default: `/`
+		- **File extension**: Required: `Optional`; Type: 🔤 `STRING`; Default: `log`
 - **`Portainer-Agent-Run`**: Creates and runs a `Docker` container for `Portainer Agent` that another `Portainer` instance can connect to and collect container information.
 	- ### 📌 Argument
 		- **Agent secret**: Required: `True`; Type: 🔤 `STRING`; **Note**: As defined in the target `Portainer` portal.
