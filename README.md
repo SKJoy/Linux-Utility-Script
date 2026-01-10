@@ -44,7 +44,7 @@ Scripts that do not use Linux distribution specific conditions may work without 
 	- 👿 Dangerous command, use with **CAUTION**!
 	- ### 📌 Argument
 		- **Maximum depth**: Required: `Optional`; Type: 🔢 `INTEGER`; Default: `3`
-		- **Base path**: Required: `Optional`; Type: 🔤 `STRING`; Default: `/`
+		- **Base path**: Required: `Optional`; Type: 🔤 `STRING`; Default: `/`; **Note**: Must use trailing slash (`/`) if used
 		- **File extension**: Required: `Optional`; Type: 🔤 `STRING`; Default: `log`
 - **`Portainer-Agent-Run`**: Creates and runs a `Docker` container for `Portainer Agent` that another `Portainer` instance can connect to and collect container information.
 	- ### 📌 Argument
