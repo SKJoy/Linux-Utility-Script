@@ -20,7 +20,7 @@ else
 	fi
 fi
 
-cat <<CONTENT >> $FILE_TO_EDIT
+cat <<CONTENT >> "${FILE_TO_EDIT}"
 export EDITOR="nano"
 export VISUAL="$EDITOR"
 CONTENT
