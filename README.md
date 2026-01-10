@@ -18,7 +18,9 @@ Usually you just need to execute them with `BASH` like `bash /Path/To/Script.sh`
 	- GIT: `git clone https://github.com/SKJoy/Linux-Utility-Script.git /Joy/Utility/Script`
 	- Manual: Download and place all files in `/Joy/Utility/Script` path
 - **Example** use: `bash /Joy/Utility/Script/Sample/My/Script.sh`
-- Add to path: Add `export PATH="$PATH:/Joy/Utility/Script"` line into `~/.bashrc` file (or `~/.zshrc`/`~/.kshrc`) in order to be able to call the scripts directly from anywhere without the specific path
+- Add to path if you want to be able to call the scripts without using the installation path
+	- Add `export PATH="$PATH:/Joy/Utility/Script"` line into `~/.bashrc` file (or `~/.zshrc`/`~/.kshrc`)
+	- Activate immediately without a reboot: `source ~/.bashrc` (or `~/.zshrc`/`~/.kshrc`)
 
 ## 📝 Create your own script
 
