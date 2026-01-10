@@ -3,15 +3,20 @@
 A collection of utility scripts for Linux system management and maintenance. Each script should display the usage instruction when run, however, it is highly advised to check them for usage instructions before execution.
 
 ## 🔔 Important
-- `BASH` is required for this library to work. So, if not already installed, install `BASH` for your Linux instance;
-	- Alpine: `apk add bash`
-	- Debian: `apt-get install -y bash`
-	- RHEL: `dnf install -y bash`
+- `BASH` (and `GIT`) are required for this library to work. So, if not already installed, install them for your Linux instance;
+	- Alpine: `apk add bash git`
+	- Debian: `apt-get install -y bash git`
+	- RHEL: `dnf install -y bash git`
 - This library must be cloned at `/Joy/Utility/Script` path in order to execute prebuilt scripts without issues. Otherwise, if the location changes, you must update the prebuilt scripts with the modified path.
 
 ## 🔨 Usage
 
 Usually you just need to execute them with `BASH` like `bash /Path/To/Script.sh`.
+
+- ### Install
+	- GIT: `git clone https://github.com/SKJoy/Linux-Utility-Script.git /Joy/Utility/Script`
+	- Manual: Download and place all files in `/Joy/Utility/Script` path
+- Example use: `bash /Joy/Utility/Script/Sample/My/Script.sh`
 
 ## 📝 Create your own script
 
@@ -30,7 +35,7 @@ Scripts that do not use Linux distribution specific conditions may work without 
 - **`Update`**: Update (and upgrade) the Linux operating system and installed applications. Also automatically installs some tools like `cURL`, `WGet`, `SUDo`, `Nano`, `HTop`, `Midnight Commander`, etc.
 - **`Portainer-Agent-Run`**: Creates and runs a `Docker` container for `Portainer Agent` that another `Portainer` instance can connect to and collect container information.
 	- ### 📌 Argument
-		- **Agent secret**: Required: `True`; Type: 🔤 `STRING`
+		- **Agent secret**: Required: `True`; Type: 🔤 `STRING`; **Note**: As defined in the target `Portainer` portal.
 - **`Tianji-Reporter-Install`**: Install `Tianji reporter` agent to send system analytics to the `Tianji` server.
 	- ### 📌 Argument
 		- **Server domain**: Required: `True`; Type: 🔤 `STRING`; Example: `tianji.domain.tld`
