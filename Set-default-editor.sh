@@ -23,8 +23,8 @@ else
 	# 	FILE_TO_EDIT=~/.profile
 	# fi
 
-	echo "export EDITOR=\"${$DEFAULT_EDITOR}\"" >> $FILE_TO_EDIT
-	echo "export VISUAL=\"${$DEFAULT_EDITOR}\"" >> $FILE_TO_EDIT
+	echo "export EDITOR=\"${DEFAULT_EDITOR}\"" >> $FILE_TO_EDIT
+	echo "export VISUAL=\"${DEFAULT_EDITOR}\"" >> $FILE_TO_EDIT
 fi
 
 # Show result
