@@ -40,6 +40,7 @@ Scripts that do not use Linux distribution specific conditions may work without 
 - **`Update`**: Update (and upgrade) the Linux operating system and installed applications. Also automatically installs some tools like `cURL`, `WGet`, `SUDo`, `Nano`, `HTop`, `Midnight Commander`, etc.
 - **`Set-default-editor`**: Set `Nano` as the default **CLI** editor
 - **`Trim-files`**: Trim files to `ZERO` byte size
+	- 👿 Dangerous command, use with **CAUTION**!
 	- ### 📌 Argument
 		- **Maximum depth**: Required: `Optional`; Type: 🔢 `INTEGER`; Default: `3`
 		- **Base path**: Required: `Optional`; Type: 🔤 `STRING`; Default: `/`
