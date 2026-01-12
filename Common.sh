@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Keep me up to date
+git pull
+
 #region Constant
 #region Linux distribution
 LINUX_DISTRIBUTION_ALPINE="ALPINE"
@@ -35,9 +38,6 @@ else
 		fi
 	fi
 fi
-
-# Keep me up to date
-git pull
 
 # echo $LINUX_DISTRIBUTION
 # echo $CURRENT_DATE
