@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Keep me up to date
-git pull
+git pull > /dev/null 2>&1 &
 
 #region Constant
 #region Linux distribution
