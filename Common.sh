@@ -36,6 +36,9 @@ else
 	fi
 fi
 
+# Keep me up to date
+git pull
+
 # echo $LINUX_DISTRIBUTION
 # echo $CURRENT_DATE
 # echo $CURRENT_TIME
