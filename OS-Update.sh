@@ -39,6 +39,6 @@ Usage: bash $0
 Note
 - Linux distribution: ${LINUX_DISTRIBUTION}
 - Requires BASH
-- Installs utilities like cURL, SUDo, BASH, HTop, Midnight Commander, etc.
+- Installs utilities like cURL, Open SSL, SUDo, BASH, HTop, Midnight Commander, etc.
 
 CONTENT
