@@ -38,7 +38,7 @@ You can place your custom script anywhere on the system, at any path, just make 
 Scripts that do not use Linux distribution specific conditions may work without issues on any generic `*nix` system.
 
 ## 📚 Script
-- **`OS-Update`**: Update (and upgrade) the Linux operating system and installed applications. Also automatically installs some tools like `Open SSL`,  `cURL`, `WGet`, `SUDo`, `Nano`, `HTop`, `Midnight Commander`, etc.
+- **`OS-Update`**: Update (and upgrade) the Linux operating system and installed applications. Also automatically installs some tools like `Open SSL`,  `cURL`, `WGet`, `SUDo`, `Nano`, `Zip`, `HTop`, `Midnight Commander`, etc.
 - **`Set-default-editor`**: Set `Nano` as the default **CLI** editor
 - **`Empty-Trash`**: Empty trash folders including base trash path, trash for `root` user and trash for all other users
 - **`Trim-files`**: Trim files to `ZERO` byte size
