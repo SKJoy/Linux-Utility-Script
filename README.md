@@ -3,10 +3,10 @@
 A collection of utility scripts for Linux system management and maintenance. Each script should display the usage instruction when run, however, it is highly advised to check them for usage instructions before execution.
 
 ## 🔔 Important
-- `BASH` (and `GIT`) are required for this library to work. So, if not already installed, install them for your Linux instance;
-	- Alpine: `apk add bash git`
-	- Debian: `apt-get install -y bash git`
-	- RHEL: `dnf install -y bash git`
+- `SUDo`, `BASH` and `GIT` are required for this library to work. So, if not already installed, install them for your Linux instance;
+	- Alpine: `apk add sudo bash git`
+	- Debian: `apt-get install -y sudo bash git`
+	- RHEL: `dnf install -y sudo bash git`
 - This library must be cloned at `/Joy/Utility/Script` path in order to execute prebuilt scripts without issues. Otherwise, if the location changes, you must update the prebuilt scripts with the modified path.
 - This is a **continuous** `work in progress`
 
