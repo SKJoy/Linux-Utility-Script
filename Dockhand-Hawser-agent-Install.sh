@@ -15,6 +15,8 @@ DOCKHAND_URL="wss://${DOCKHAND_DOMAIN}/api/hawser/connect"
 CONFIGURATION_PATH="/etc/hawser"
 CONFIGURATION_FILE="${CONFIGURATION_PATH}/config"
 
+bash OS-Update.sh
+
 # Install Hawser agent
 curl -fsSL https://raw.githubusercontent.com/Finsys/hawser/main/scripts/install.sh | bash
 
