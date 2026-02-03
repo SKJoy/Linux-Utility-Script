@@ -11,7 +11,7 @@ cd $SCRIPT_PATH
 SERVER_DOMAIN=$1
 PULSE_TOKEN=$2
 
-curl -kfsSL https://${SERVER_DOMAIN}/install.sh | bash -s -- --url https://${SERVER_DOMAIN} --token ${PULSE_TOKEN} --interval 30s --insecure
+curl -kfsSL http://${SERVER_DOMAIN}/install.sh | bash -s -- --url http://${SERVER_DOMAIN} --token ${PULSE_TOKEN} --interval 30s --insecure
 
 # Show result
 cat <<CONTENT
