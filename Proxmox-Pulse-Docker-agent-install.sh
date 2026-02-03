@@ -11,6 +11,7 @@ cd $SCRIPT_PATH
 SERVER_DOMAIN=$1
 PULSE_TOKEN=$2
 
+curl -fsSL http://${SERVER_DOMAIN}/install.sh | bash -s -- --uninstall --url http://${SERVER_DOMAIN}
 curl -kfsSL http://${SERVER_DOMAIN}/install.sh | bash -s -- --url http://${SERVER_DOMAIN} --token ${PULSE_TOKEN} --interval 30s --insecure
 
 # Show result
@@ -19,9 +20,6 @@ cat <<CONTENT
 Usage: bash $0 SERVER_DOMAIN PULSE_TOKEN
 - SERVER_DOMAIN   = "pulse.domain.com"
 - PULSE_TOKEN = "abcdefghijklmnopqrstuvwxy"
-
-Note
-- HTTPS only
 
 Pulse Docker agent started in the background
 - ${SERVER_DOMAIN}
