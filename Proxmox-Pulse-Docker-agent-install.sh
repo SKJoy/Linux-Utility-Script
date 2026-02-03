@@ -1,5 +1,4 @@
 #!/bin/bash
-# curl -kfsSL http://proxmox-pulse.piti.cloud/install.sh | bash -s -- --url http://proxmox-pulse.piti.cloud --token e8f982cf999998b713fc7318d4d9a08d9e60b3c978bbf119be971bd3d56dd9b7 --interval 30s --insecure
 
 # Load common library
 source /Joy/Utility/Script/Common.sh
