@@ -19,7 +19,7 @@ fi
 ESCAPED_IP=$(echo "$IP_TO_REMOVE" | sed 's/\./\\&/g')
 HOSTS_DENY_PATH="/var/lib/denyhosts"
 
-service denyhosts stop
+systemctl stop denyhosts
 
 sed -i "/${ESCAPED_IP}/d" /etc/hosts.deny
 sed -i "/${ESCAPED_IP}/d" "${HOSTS_DENY_PATH}/hosts"
@@ -30,8 +30,8 @@ sed -i "/${ESCAPED_IP}/d" "${HOSTS_DENY_PATH}/users-hosts"
 sed -i "/${ESCAPED_IP}/d" "${HOSTS_DENY_PATH}/users-valid"
 sed -i "/${ESCAPED_IP}/d" "${HOSTS_DENY_PATH}/users-invalid"
 
-service denyhosts restart
-service sshd restart
+systemctl start denyhosts
+systemctl restart sshd
 
 # Show result
 cat <<CONTENT
