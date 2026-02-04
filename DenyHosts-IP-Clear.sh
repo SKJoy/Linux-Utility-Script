@@ -27,6 +27,8 @@ sed -i "/${ESCAPED_IP}/d" "${HOSTS_DENY_PATH}/hosts-restricted"
 sed -i "/${ESCAPED_IP}/d" "${HOSTS_DENY_PATH}/hosts-root"
 sed -i "/${ESCAPED_IP}/d" "${HOSTS_DENY_PATH}/hosts-valid"
 sed -i "/${ESCAPED_IP}/d" "${HOSTS_DENY_PATH}/users-hosts"
+sed -i "/${ESCAPED_IP}/d" "${HOSTS_DENY_PATH}/users-valid"
+sed -i "/${ESCAPED_IP}/d" "${HOSTS_DENY_PATH}/users-invalid"
 
 systemctl start denyhosts
 systemctl restart sshd
