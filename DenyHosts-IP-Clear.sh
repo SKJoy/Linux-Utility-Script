@@ -12,7 +12,7 @@ IP_TO_REMOVE=$1
 
 # Check if an IP address was provided as an argument
 if [ -z "$IP_TO_REMOVE" ]; then
-    echo "Usage: $0 <IP_ADDRESS>"
+    echo "Usage: $0 IP_TO_REMOVE"
     exit 1
 fi
 
@@ -34,10 +34,10 @@ systemctl restart sshd
 # Show result
 cat <<CONTENT
 
-Usage: bash $0 IP_ADDRESS
-- IP_ADDRESS = IP address to remove from the deny hosts list
+Usage: bash $0 IP_TO_REMOVE
+- IP_TO_REMOVE = 111.222.123.234
 
 IP address removed from deny hosts
-- ${IP_ADDRESS}
+- ${IP_TO_REMOVE}
 
 CONTENT
