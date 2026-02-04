@@ -54,12 +54,15 @@ Scripts that do not use Linux distribution specific conditions may work without 
 	- ### 📌 Argument
 		- **Server domain**: Required: `True`; Type: 🔤 `STRING`; Example: `tianji.domain.tld`
 		- **Workspace ID**: Required: `True`; Type: 🔤 `STRING`; **Note**: Get it using `Tianji > Server > Add` button
-- **`Dockhand-Hawser-agent-install`**: Install `Hawser agent` to report system analytics to `Dockhand` server. This is used for **edge devices** that are behind `LAN` or `NAT` where the `Dockhand` server cannot reach them directly.
+- **`Dockhand-Hawser-agent-Install`**: Install `Hawser agent` to report system analytics to `Dockhand` server. This is used for **edge devices** that are behind `LAN` or `NAT` where the `Dockhand` server cannot reach them directly.
 	- ### 📌 Argument
 		- **Server domain**: Required: `True`; Type: 🔤 `STRING`; Example: `dockhand.domain.tld`
 		- **Token**: Required: `True`; Type: 🔤 `STRING`; **Note**: Generate it using `Dockhand > Settings > Environments > Add environment` button
-- **`Proxmox-Pulse-Docker-agent-install`**: Install `Docker agent` to report system analytics to `Pulse` server for `Proxmox`.
+- **`Proxmox-Pulse-Docker-agent-Install`**: Install `Docker agent` to report system analytics to `Pulse` server for `Proxmox`.
 	- ### 📌 Argument
 		- **Server domain**: Required: `True`; Type: 🔤 `STRING`; Example: `pulse.domain.tld`
 		- **Token**: Required: `True`; Type: 🔤 `STRING`; **Note**: Generate it in `Pulse` settings panel.
+- **`DenyHosts-IP-Clear`**: Remove specified IP from `DenyHosts` list.
+	- ### 📌 Argument
+		- **IP_ADDRESS**: Required: `True`; Type: 🔤 `STRING`
 
