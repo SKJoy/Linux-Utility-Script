@@ -58,6 +58,8 @@ Scripts that do not use Linux distribution specific conditions may work without 
 	- ### 📌 Argument
 		- **Server domain**: Required: `True`; Type: 🔤 `STRING`; Example: `dockhand.domain.tld`
 		- **Token**: Required: `True`; Type: 🔤 `STRING`; **Note**: Generate it using `Dockhand > Settings > Environments > Add environment` button
+	- ### 🔔 Note
+		- Requires `SUDo` installed
 - **`Proxmox-Pulse-Docker-agent-Install`**: Install `Docker agent` to report system analytics to `Pulse` server for `Proxmox`.
 	- ### 📌 Argument
 		- **Server domain**: Required: `True`; Type: 🔤 `STRING`; Example: `pulse.domain.tld`
