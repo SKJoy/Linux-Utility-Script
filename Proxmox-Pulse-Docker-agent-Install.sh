@@ -11,6 +11,7 @@ cd $SCRIPT_PATH
 SERVER_DOMAIN=$1
 PULSE_TOKEN=$2
 
+pkill 'pulse-agent'
 curl -fsSL http://${SERVER_DOMAIN}/install.sh | bash -s -- --uninstall --url http://${SERVER_DOMAIN}
 curl -kfsSL http://${SERVER_DOMAIN}/install.sh | bash -s -- --url http://${SERVER_DOMAIN} --token ${PULSE_TOKEN} --interval 30s --insecure
 
