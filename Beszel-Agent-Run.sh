@@ -12,7 +12,9 @@ PUBLIC_KEY=$1
 TOKEN=$2
 HUB_DOMAIN=$3
 
-curl -sL https://get.beszel.dev -o /tmp/install-agent.sh && chmod +x /tmp/install-agent.sh && /tmp/install-agent.sh -p 45876 -k "${PUBLIC_KEY}" -t "${TOKEN}" -url "${HUB_DOMAIN}"
+curl -sL https://get.beszel.dev -o /tmp/install-agent.sh && chmod +x /tmp/install-agent.sh
+/tmp/install-agent.sh -u
+/tmp/install-agent.sh -p 45876 -k "${PUBLIC_KEY}" -t "${TOKEN}" -url "${HUB_DOMAIN}" --auto-update
 
 # CONTAINER_NAME="beszel-agent"
 
