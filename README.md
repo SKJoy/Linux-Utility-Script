@@ -67,4 +67,9 @@ Scripts that do not use Linux distribution specific conditions may work without 
 - **`DenyHosts-IP-Clear`**: Remove specified IP from `DenyHosts` list.
 	- ### 📌 Argument
 		- **IP_ADDRESS**: Required: `True`; Type: 🔤 `STRING`
+- **`Beszel-Agent-Run`**: Creates and runs a `Docker` container for `Beszel Agent` to report to `Beszel Hub`.
+	- ### 📌 Argument
+		- **Public key**: Required: `True`; Type: 🔤 `STRING`; **Note**: As defined in `Beszel Hub`.
+		- **Token**: Required: `True`; Type: 🔤 `STRING`; **Note**: As defined in `Beszel Hub`.
+		- **Hub domain**: Required: `True`; Type: 🔤 `STRING`; **Note**: As defined in `Beszel Hub`.
 
