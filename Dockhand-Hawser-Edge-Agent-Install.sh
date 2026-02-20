@@ -8,10 +8,10 @@ cd $SCRIPT_PATH
 
 # Write your code below ---
 
-DOCKHAND_DOMAIN=$1
-AGENT_TOKEN=$2
+DOCKHAND_BASE_URL=$1
+DOCKHAND_AGENT_TOKEN=$2
 
-DOCKHAND_URL="wss://${DOCKHAND_DOMAIN}/api/hawser/connect"
+DOCKHAND_URL="${DOCKHAND_BASE_URL}/api/hawser/connect"
 CONFIGURATION_PATH="/etc/hawser"
 CONFIGURATION_FILE="${CONFIGURATION_PATH}/config"
 
@@ -24,7 +24,7 @@ curl -fsSL https://raw.githubusercontent.com/Finsys/hawser/main/scripts/install.
 # Write edge agent configuration file
 mkdir -p ${CONFIGURATION_PATH}
 echo "DOCKHAND_SERVER_URL=${DOCKHAND_URL}" > ${CONFIGURATION_FILE}
-echo "TOKEN=${AGENT_TOKEN}" >> ${CONFIGURATION_FILE}
+echo "TOKEN=${DOCKHAND_AGENT_TOKEN}" >> ${CONFIGURATION_FILE}
 
 # Configure system service
 if [[ "$LINUX_DISTRIBUTION" == $LINUX_DISTRIBUTION_ALPINE ]]; then
@@ -42,18 +42,17 @@ fi
 # Show result
 cat <<CONTENT
 
-Usage: bash $0 DOMAIN TOKEN
-- DOMAIN = "domain.tld"
-- TOKEN  = "abcdefghijklmnopqrstuvwxy"
+Usage: bash $0 BASE_URL AGENT_TOKEN
+- BASE_URL    = "wss://dockhand.domain.tld"
+- AGENT_TOKEN = "abcdefghijklmnopqrstuvwxy"
 
 Note
-- HTTPS only
-- WebSocket must be enabled (WSS)
+- WebSocket must be enabled
 - Requires Docker engine (service)
 
 Hawser agent service for Dockhand installed & started
-- Dockhand URL : ${DOCKHAND_URL}
-- Agent token  : ${AGENT_TOKEN}
+- Base URL    : ${DOCKHAND_BASE_URL}
+- Agent token : ${DOCKHAND_AGENT_TOKEN}
 
 CONTENT
 
