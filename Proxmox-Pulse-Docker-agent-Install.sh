@@ -8,22 +8,22 @@ cd $SCRIPT_PATH
 
 # Write your code below ---
 
-SERVER_DOMAIN=$1
+PULSE_URL=$1
 PULSE_TOKEN=$2
 
 pkill 'pulse-agent'
-curl -fsSL http://${SERVER_DOMAIN}/install.sh | bash -s -- --uninstall --url http://${SERVER_DOMAIN}
-curl -kfsSL http://${SERVER_DOMAIN}/install.sh | bash -s -- --url http://${SERVER_DOMAIN} --token ${PULSE_TOKEN} --interval 30s --insecure
+curl -kfsSL ${PULSE_URL}/install.sh | bash -s -- --uninstall --url ${PULSE_URL}
+curl -kfsSL ${PULSE_URL}/install.sh | bash -s -- --url ${PULSE_URL} --token ${PULSE_TOKEN} --interval 30s --insecure
 
 # Show result
 cat <<CONTENT
 
-Usage: bash $0 SERVER_DOMAIN PULSE_TOKEN
-- SERVER_DOMAIN   = "pulse.domain.com"
-- PULSE_TOKEN = "abcdefghijklmnopqrstuvwxy"
+Usage: bash $0 URL TOKEN
+- URL   = "https://pulse.domain.com"
+- TOKEN = "abcdefghijklmnopqrstuvwxy"
 
 Pulse Docker agent started in the background
-- ${SERVER_DOMAIN}
+- ${PULSE_URL}
 - ${PULSE_TOKEN}
 
 CONTENT

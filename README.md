@@ -62,7 +62,7 @@ Scripts that do not use Linux distribution specific conditions may work without 
 		- Requires `SUDo` installed
 - **`Proxmox-Pulse-Docker-agent-Install`**: Install `Docker agent` to report system analytics to `Pulse` server for `Proxmox`.
 	- ### 📌 Argument
-		- **Server domain**: Required: `True`; Type: 🔤 `STRING`; Example: `pulse.domain.tld`
+		- **Pulse URL**: Required: `True`; Type: 🔤 `STRING`; Example: `https://pulse.domain.tld`
 		- **Token**: Required: `True`; Type: 🔤 `STRING`; **Note**: Generate it in `Pulse` settings panel.
 - **`DenyHosts-IP-Clear`**: Remove specified IP from `DenyHosts` list.
 	- ### 📌 Argument
