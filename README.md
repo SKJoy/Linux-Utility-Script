@@ -60,7 +60,7 @@ Scripts that do not use Linux distribution specific conditions may work without 
 		- **Agent token**: Required: `True`; Type: 🔤 `STRING`; **Note**: Generate it using `Dockhand > Settings > Environments > Add environment` button
 	- ### 🔔 Note
 		- Requires `SUDo` installed
-- **`Proxmox-Pulse-Docker-agent-Install`**: Install `Docker agent` to report system analytics to `Pulse` server for `Proxmox`.
+- **`Proxmox-Pulse-Agent-Install`**: Install `Docker agent` to report system analytics to `Pulse` server for `Proxmox`.
 	- ### 📌 Argument
 		- **Pulse URL**: Required: `True`; Type: 🔤 `STRING`; Example: `https://pulse.domain.tld`
 		- **Token**: Required: `True`; Type: 🔤 `STRING`; **Note**: Generate it in `Pulse` settings panel.
