@@ -12,7 +12,7 @@ PULSE_URL=$1
 PULSE_TOKEN=$2
 
 pkill 'pulse-agent'
-curl -kfsSL ${PULSE_URL}/install.sh | bash -s -- --uninstall --url ${PULSE_URL}
+curl -fsSL ${PULSE_URL}/install.sh | bash -s -- --uninstall --url ${PULSE_URL}
 curl -kfsSL ${PULSE_URL}/install.sh | bash -s -- --url ${PULSE_URL} --token ${PULSE_TOKEN} --interval 30s --insecure
 
 # Show result
