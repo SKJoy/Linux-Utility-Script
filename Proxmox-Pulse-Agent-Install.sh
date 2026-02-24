@@ -23,7 +23,7 @@ Usage: bash $0 URL TOKEN
 - TOKEN = "abcdefghijklmnopqrstuvwxy"
 
 Pulse Docker agent started in the background
-- ${PULSE_URL}
-- ${PULSE_TOKEN}
+- URL   : ${PULSE_URL}
+- Token : ${PULSE_TOKEN}
 
 CONTENT
