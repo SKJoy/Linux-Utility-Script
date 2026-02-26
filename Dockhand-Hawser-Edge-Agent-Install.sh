@@ -23,8 +23,15 @@ curl -fsSL https://raw.githubusercontent.com/Finsys/hawser/main/scripts/install.
 
 # Write edge agent configuration file
 mkdir -p ${CONFIGURATION_PATH}
-echo "DOCKHAND_SERVER_URL=${DOCKHAND_URL}" > ${CONFIGURATION_FILE}
+echo "# Edge Mode Configuration" > ${CONFIGURATION_FILE}
+echo "DOCKHAND_SERVER_URL=${DOCKHAND_URL}" >> ${CONFIGURATION_FILE}
 echo "TOKEN=${DOCKHAND_AGENT_TOKEN}" >> ${CONFIGURATION_FILE}
+echo "LOG_LEVEL=error" >> ${CONFIGURATION_FILE}
+echo "" >> ${CONFIGURATION_FILE}
+echo "# Connection settings" >> ${CONFIGURATION_FILE}
+echo "HEARTBEAT_INTERVAL=30" >> ${CONFIGURATION_FILE}
+echo "RECONNECT_DELAY=1" >> ${CONFIGURATION_FILE}
+echo "MAX_RECONNECT_DELAY=60" >> ${CONFIGURATION_FILE}" >> ${CONFIGURATION_FILE}
 
 # Configure system service
 if [[ "$LINUX_DISTRIBUTION" == $LINUX_DISTRIBUTION_ALPINE ]]; then
