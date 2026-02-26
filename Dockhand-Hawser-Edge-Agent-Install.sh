@@ -27,7 +27,7 @@ echo "# Edge Mode Configuration" > ${CONFIGURATION_FILE}
 echo "DOCKER_SOCKET=/var/run/docker.sock" >> ${CONFIGURATION_FILE}
 echo "DOCKHAND_SERVER_URL=${DOCKHAND_URL}" >> ${CONFIGURATION_FILE}
 echo "TOKEN=${DOCKHAND_AGENT_TOKEN}" >> ${CONFIGURATION_FILE}
-echo "LOG_LEVEL=error" >> ${CONFIGURATION_FILE}
+echo "LOG_LEVEL=debug hawser" >> ${CONFIGURATION_FILE}
 echo "" >> ${CONFIGURATION_FILE}
 echo "# Connection settings" >> ${CONFIGURATION_FILE}
 echo "HEARTBEAT_INTERVAL=30" >> ${CONFIGURATION_FILE}
