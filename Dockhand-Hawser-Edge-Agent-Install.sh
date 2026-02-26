@@ -24,6 +24,7 @@ curl -fsSL https://raw.githubusercontent.com/Finsys/hawser/main/scripts/install.
 # Write edge agent configuration file
 mkdir -p ${CONFIGURATION_PATH}
 echo "# Edge Mode Configuration" > ${CONFIGURATION_FILE}
+echo "DOCKER_SOCKET=/var/run/docker.sock" >> ${CONFIGURATION_FILE}
 echo "DOCKHAND_SERVER_URL=${DOCKHAND_URL}" >> ${CONFIGURATION_FILE}
 echo "TOKEN=${DOCKHAND_AGENT_TOKEN}" >> ${CONFIGURATION_FILE}
 echo "LOG_LEVEL=error" >> ${CONFIGURATION_FILE}
