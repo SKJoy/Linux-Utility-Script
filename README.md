@@ -72,4 +72,7 @@ Scripts that do not use Linux distribution specific conditions may work without 
 		- **Public key**: Required: `True`; Type: 🔤 `STRING`; **Note**: As defined in `Beszel Hub`.
 		- **Token**: Required: `True`; Type: 🔤 `STRING`; **Note**: As defined in `Beszel Hub`.
 		- **Hub domain**: Required: `True`; Type: 🔤 `STRING`; **Note**: As defined in `Beszel Hub`.
+- **`WordPress-Backup`**: Backup a `WordPress` site with `WP CLI` tool.
+	- ### 🔔 Note
+		- Must not execute as `root` user; unexpected results may occur
 
