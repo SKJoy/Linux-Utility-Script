@@ -4,19 +4,10 @@
 source /Joy/Utility/Script/Common.sh
 
 # Set working path to this script's path
-cd $SCRIPT_PATH
+# cd $SCRIPT_PATH # We need this to run in current working path
 
 # Write your code below ---
 
-# Install WordPress CLI
-cd /tmp
-curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-php wp-cli.phar --info
-chmod +x wp-cli.phar
-mv wp-cli.phar /usr/local/bin/wp
-wp cli info
-
-# Backup
 echo "File name [wordpress]: " && read BFNP && BFNP=${BFNP:="wordpress"} && DT=$(date +%Y-%m-%d-%H-%M-%S)
 BFN=$BFNP-$DT
 rm -f wordpress.sql
@@ -48,7 +39,8 @@ cat <<CONTENT
 
 Usage: bash $0
 
-Result
+Note
 "- Backup file = ${BFN}.zip"
+"- WordPress CLI must be installed"
 
 CONTENT
