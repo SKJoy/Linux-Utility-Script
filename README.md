@@ -76,4 +76,7 @@ Scripts that do not use Linux distribution specific conditions may work without 
 - **`WordPress-Backup`**: Backup a `WordPress` site with `WordPress CLI` tool.
 	- ### 🔔 Note
 		- Must not execute as `root` user; unexpected results may occur
+- **`WordPress-Restore`**: Restore `WordPress` site from backup `ZIP` file with `WordPress CLI` tool.
+	- ### 🔔 Note
+		- Must not execute as `root` user; unexpected results may occur
 
