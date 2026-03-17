@@ -8,6 +8,12 @@ source /Joy/Utility/Script/Common.sh
 
 # Write your code below ---
 
+# Check 1: Prevent root execution
+if [[ $IS_ROOT_USER -eq 1 ]]; then
+    echo "ERROR: This script should NOT run as root!" >&2
+    exit 1
+fi
+
 echo "File name [wordpress]: " && read BFNP && BFNP=${BFNP:="wordpress"} && DT=$(date +%Y-%m-%d-%H-%M-%S)
 BFN=$BFNP-$DT
 rm -f wordpress.sql

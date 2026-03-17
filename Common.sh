@@ -39,6 +39,13 @@ else
 	fi
 fi
 
+# Detect if executed as `root` user
+if [[ $EUID -eq 0 ]]; then
+    IS_ROOT_USER=1
+else
+    IS_ROOT_USER=0
+fi
+
 # echo $LINUX_DISTRIBUTION
 # echo $CURRENT_DATE
 # echo $CURRENT_TIME
