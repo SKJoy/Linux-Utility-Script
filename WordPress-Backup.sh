@@ -17,10 +17,10 @@ fi
 echo "File name [wordpress]: " && read BFNP && BFNP=${BFNP:="wordpress"} && DT=$(date +%Y-%m-%d-%H-%M-%S)
 BFN="${BFNP}-${DT}"
 
-rm -f wordpress.sql $BFN.zip
+rm -f wordpress.sql
 wp db export wordpress.sql
 
-zip -r9 $BFN.zip . \
+zip -r9 ${BFN}.zip . \
 	-x .tmb/\* \
 	-x .well-known/\* \
 	-x awstats-*/\* \

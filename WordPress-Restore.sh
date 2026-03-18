@@ -24,6 +24,7 @@ unzip -o $BFN && \
     wp config set DB_NAME "${DB_NAME}" && \
     wp config set DB_USER "${DB_USER}" && \
     wp config set DB_PASSWORD "${DB_PASSWORD}" && \
+    wp db reset --yes && \
     wp db import wordpress.sql && \
     rm -f wordpress.sql
 
