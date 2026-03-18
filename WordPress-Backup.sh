@@ -15,8 +15,9 @@ if [[ $IS_ROOT_USER -eq 1 ]]; then
 fi
 
 echo "File name [wordpress]: " && read BFNP && BFNP=${BFNP:="wordpress"} && DT=$(date +%Y-%m-%d-%H-%M-%S)
-BFN=$BFNP-$DT
-rm -f wordpress.sql
+BFN="${BFNP}-${DT}"
+
+rm -f wordpress.sql $BFN.zip
 wp db export wordpress.sql
 
 zip -r9 $BFN.zip . \
@@ -31,14 +32,12 @@ zip -r9 $BFN.zip . \
 	-x litespeed.conf \
 	-x php.ini \
 	-x *.zip \
-	-x */\cache/\* \
-	-x */\ignore-uploads/\* \
 	-x */\*.log \
-	-x */\*/\*.wpress
+	-x */\*/\*.wpress \
+	-x */\ignore-cache/\* \
+	-x */\ignore-uploads/\*
 
 rm -f wordpress.sql
-echo "- Backup file = ${BFN}.zip"
-rm -f ignore-$BFN.zip
 
 # Show result
 cat <<CONTENT
