@@ -16,8 +16,16 @@ fi
 
 BFN=$1
 
-echo "Database password: " && read DATABASE_PASSWORD
-unzip -o $BFN && wp config set DB_PASSWORD "${DATABASE_PASSWORD}" && wp db import wordpress.sql && rm -f wordpress.sql
+echo "Database name: " && read DB_NAME
+echo "Database user: " && read DB_USER && DB_USER=${DB_USER:=${DB_NAME}}
+echo "Database password: " && read DB_PASSWORD
+
+unzip -o $BFN && \
+    wp config set DB_NAME "${DB_NAME}" && \
+    wp config set DB_USER "${DB_USER}" && \
+    wp config set DB_PASSWORD "${DB_PASSWORD}" && \
+    wp db import wordpress.sql && \
+    rm -f wordpress.sql
 
 # unzip -o $BFN && echo "Press ENTER to edit 'wp-config.php' to set new database credentials..." && read DUMMY_INPUT && nano wp-config.php && wp db import wordpress.sql && rm -f wordpress.sql
 
