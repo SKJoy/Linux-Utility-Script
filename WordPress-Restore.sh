@@ -17,7 +17,7 @@ fi
 BFN=$1
 
 echo "Database name: " && read DB_NAME
-echo "Database user: " && read DB_USER && DB_USER=${DB_USER:=${DB_NAME}}
+echo "Database user [database user]: " && read DB_USER && DB_USER=${DB_USER:=${DB_NAME}}
 echo "Database password: " && read DB_PASSWORD
 
 unzip -o $BFN && \
