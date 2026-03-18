@@ -15,7 +15,7 @@ if [[ $IS_ROOT_USER -eq 1 ]]; then
 fi
 
 BFN=$1
-unzip -o $BFN.zip` && echo "Press ENTER to edit 'wp-config.php' to set new database credentials..." && read DUMMY_INPUT && nano wp-config.php && wp db import wordpress.sql && rm -f wordpress.sql
+unzip -o $BFN.zip && echo "Press ENTER to edit 'wp-config.php' to set new database credentials..." && read DUMMY_INPUT && nano wp-config.php && wp db import wordpress.sql && rm -f wordpress.sql
 
 # Show result
 cat <<CONTENT
@@ -24,6 +24,6 @@ Usage: bash $0
 - BACKUP_FILE = "backup.zip"
 
 Note
-"- WordPress CLI must be installed"
+- WordPress CLI must be installed
 
 CONTENT

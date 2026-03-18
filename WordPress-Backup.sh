@@ -46,7 +46,7 @@ cat <<CONTENT
 Usage: bash $0
 
 Note
-"- Backup file = ${BFN}.zip"
-"- WordPress CLI must be installed"
+- Backup file = ${BFN}.zip
+- WordPress CLI must be installed
 
 CONTENT
