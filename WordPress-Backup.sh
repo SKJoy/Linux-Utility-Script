@@ -31,10 +31,10 @@ zip -r9 $BFN.zip . \
 	-x litespeed.conf \
 	-x php.ini \
 	-x *.zip \
-	-x */cache/\* \
-	-x */ignore-uploads/\* \
+	-x */\cache/\* \
+	-x */\ignore-uploads/\* \
 	-x */\*.log \
-	-x */*/*.wpress
+	-x */\*/\*.wpress
 
 rm -f wordpress.sql
 echo "- Backup file = ${BFN}.zip"
